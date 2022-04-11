@@ -40,3 +40,12 @@ install(
   FILES ${CMAKE_CURRENT_BINARY_DIR}/cppcoro/cppcoroConfig.cmake
   DESTINATION ${config_package_location}
   COMPONENT Devel)
+
+
+#WIP testing
+
+add_executable(daveTests
+	daveTests.cpp
+)
+
+target_link_libraries(daveTests cppcoro)

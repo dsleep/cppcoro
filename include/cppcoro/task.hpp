@@ -48,8 +48,8 @@ namespace cppcoro
 				// Without this, some tests in async_auto_reset_event_tests.cpp
 				// were crashing under x86 optimised builds.
 				template<typename PROMISE>
-				CPPCORO_NOINLINE
-				void await_suspend(cppcoro::coroutine_handle<PROMISE> coroutine)
+				CPPCORO_NOINLINE 
+				void await_suspend(cppcoro::coroutine_handle<PROMISE> coroutine) noexcept
 				{
 					task_promise_base& promise = coroutine.promise();
 
